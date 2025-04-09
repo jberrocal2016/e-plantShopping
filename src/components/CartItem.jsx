@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeItem, updateQuantity } from "./CartSlice";
+import { removeItem, updateQuantity } from "../redux/CartSlice";
 import "./CartItem.css";
 
 const CartItem = ({ onContinueShopping, setAddedToCart }) => {
@@ -45,7 +45,7 @@ const CartItem = ({ onContinueShopping, setAddedToCart }) => {
         const updated = { ...prevState };
         delete updated[item.name];
         return updated;
-      })
+      });
     }
   };
 
